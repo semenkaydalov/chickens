@@ -47,6 +47,15 @@ namespace program {
             this.coordinates = coordinates;
         }
 
+        public void setValues(string name, int weight) {
+            this.name = name;
+            this.weight = weight;
+        }
+
+        public void setValues(string name) {
+            this.name = name;
+        }
+
         public virtual void printValues() {
             System.Console.Write("{0}'s weight: {1}. Coordinates:", this.name, this.weight);
             foreach(byte el in this.coordinates) {
@@ -60,6 +69,12 @@ namespace program {
             System.Console.WriteLine("Object has been created");
             this.setValues(name, weight, coordinates);
         } 
+
+        public egg (string name, int weight){
+            System.Console.WriteLine("Object has been created");
+            this.setValues(name, weight);
+        }
+
         public egg(string name){
             System.Console.WriteLine("Object has been created");
             this.name = name;

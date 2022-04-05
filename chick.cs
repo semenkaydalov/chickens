@@ -6,6 +6,8 @@ namespace program {
 
         public chick (string name) : base(name) {}
 
+        public chick (string name, int weight) : base(name, weight) {}
+
         public chick (string name, int weight, byte[] coordinates) : base(name, weight, coordinates) {}
  
     }

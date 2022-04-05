@@ -59,6 +59,23 @@ namespace program {
                             }
 
                             chicken chicken1 = new chicken(name, weight, color, coordinates);
+
+                            System.Console.WriteLine("Do you want to feed your chicken? (y/n)");
+                            string food = Console.ReadLine();
+                            if (food == "y") {
+                                System.Console.WriteLine("Let's choose food for your chicken!");
+                                System.Console.Write("Type name of your feed: ");
+                                string feedname = Console.ReadLine();
+                                System.Console.Write("Choose the stimulus of your feed (0-10): ");
+                                int stimulant = Convert.ToInt16(Console.ReadLine());
+                                System.Console.Write("Choose the nutritional value of your food (0-10): ");
+                                int satiety = Convert.ToInt16(Console.ReadLine());
+                                feed feed1 = new feed(); 
+                                feed1.setValues (feedname, stimulant, satiety);
+                                feed1.printValues();
+                                System.Console.WriteLine("Your chicken has eaten!");
+                            }
+
                             System.Console.WriteLine("-----------------------");
 
                             chicken1.printValues();

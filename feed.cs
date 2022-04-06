@@ -15,7 +15,7 @@ namespace program {
 
             stim = "low stimulus";
             sat = "low nutritional value";
-            
+
             if (stimulant > 5) {
                 stim = "high stimulus";
             }
@@ -25,7 +25,7 @@ namespace program {
         }
 
         public void printValues() {
-            System.Console.WriteLine("You choose feed with {0} and {1}", stim, sat);
+            System.Console.WriteLine("You choose feed with {0} and {1}. Good choice!", stim, sat);
         }
 
     }

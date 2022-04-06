@@ -30,7 +30,7 @@ namespace program {
         }
 
         public void peck() {
-            System.Console.WriteLine("Chick has been pecked by " + this.Name);
+            System.Console.WriteLine("Chick has been pecked by {0}!", this.Name);
         }
 
     }

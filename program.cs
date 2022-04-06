@@ -59,13 +59,15 @@ namespace program {
                             }
 
                             chicken chicken1 = new chicken(name, weight, color, coordinates);
+                            System.Console.WriteLine("-----------------------");
+                            chicken1.printValues();
 
-                            System.Console.WriteLine("Do you want to feed your chicken? (y/n)");
-                            string food = Console.ReadLine();
+                            System.Console.Write("Do you want to feed {0}? (y/n) ", chicken1.Name);
+                            string food = Console.ReadLine()!;
                             if (food == "y") {
-                                System.Console.WriteLine("Let's choose food for your chicken!");
+                                System.Console.WriteLine("Let's choose food for {0}!", chicken1.Name);
                                 System.Console.Write("Type name of your feed: ");
-                                string feedname = Console.ReadLine();
+                                string feedname = Console.ReadLine()!;
                                 System.Console.Write("Choose the stimulus of your feed (0-10): ");
                                 int stimulant = Convert.ToInt16(Console.ReadLine());
                                 System.Console.Write("Choose the nutritional value of your food (0-10): ");
@@ -78,10 +80,18 @@ namespace program {
 
                             System.Console.WriteLine("-----------------------");
 
-                            chicken1.printValues();
-                            chicken1.peck();
-                            chicken1.run();
-                            chicken1.printValues();
+                            System.Console.Write("Do you want to peck your chick? (y/n) ");
+                            string pecking = Console.ReadLine()!;
+                            if (pecking == "y") {
+                                chicken1.peck();
+                            }
+                            System.Console.WriteLine("-----------------------");
+                            System.Console.Write("Do you want to run? (y/n) ");
+                            string running = Console.ReadLine()!;
+                            if (running == "y") {
+                                chicken1.run();
+                            }
+                            chicken1.printCoordinates();
                         }
                         catch (FormatException) {
                             System.Console.WriteLine("Wrong format!");

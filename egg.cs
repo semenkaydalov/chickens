@@ -19,14 +19,13 @@ namespace program {
 
         public int Weight{
             get {
-                System.Console.Write("Weight = ");
                 return this.weight;
             }
             set {
                 if (value < 1)
                     this.weight = 1;
-                else if (value > 5)
-                    this.weight = 5;
+                else if (value > 10)
+                    this.weight = 10;
                 else
                     this.weight = value;    
             }
@@ -64,19 +63,28 @@ namespace program {
             System.Console.WriteLine(";");
             System.Console.WriteLine("-----------------------");
         }
+
+        public virtual void printCoordinates() {
+            System.Console.Write(this.name + "'s coordinates:");
+            foreach(byte el in this.coordinates) {
+                System.Console.Write(" " + el);
+            }
+            System.Console.WriteLine(";");
+            System.Console.WriteLine("-----------------------");
+        }
         
         public egg (string name, int weight, byte[] coordinates){
-            System.Console.WriteLine("Object has been created");
+            System.Console.WriteLine("Object has been created!");
             this.setValues(name, weight, coordinates);
         } 
 
         public egg (string name, int weight){
-            System.Console.WriteLine("Object has been created");
+            System.Console.WriteLine("Object has been created!");
             this.setValues(name, weight);
         }
 
         public egg(string name){
-            System.Console.WriteLine("Object has been created");
+            System.Console.WriteLine("Object has been created!");
             this.name = name;
         }
 
